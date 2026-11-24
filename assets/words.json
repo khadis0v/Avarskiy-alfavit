@@ -1,0 +1,80 @@
+[
+  {
+    "word": "гъулай",
+    "translation": "легко",
+    "source": "audio/гъулай.wav",
+    "letter": "Гъ"
+  },
+  {
+    "word": "гьан",
+    "translation": "мясо",
+    "source": "audio/гьан.wav",
+    "letter": "Гь"
+  },
+  {
+    "word": "гӏеч",
+    "translation": "яблоко",
+    "source": "audio/гӏеч.wav",
+    "letter": "ГӀ"
+  },
+  {
+    "word": "къуба",
+    "translation": "купол",
+    "source": "audio/къуба.wav",
+    "letter": "Къ"
+  },
+  {
+    "word": "кьезе",
+    "translation": "давать",
+    "source": "audio/кьезе.wav",
+    "letter": "Кь"
+  },
+  {
+    "word": "кӏаз",
+    "translation": "платок",
+    "source": "audio/кӏаз.wav",
+    "letter": "КӀ"
+  },
+  {
+    "word": "лъар",
+    "translation": "ручей",
+    "source": "audio/лъар.wav",
+    "letter": "Лъ"
+  },
+  {
+    "word": "тӏагъур",
+    "translation": "шапка",
+    "source": "audio/тIагъур.wav",
+    "letter": "ТӀ"
+  },
+  {
+    "word": "хъеги",
+    "translation": "кашель",
+    "source": "audio/хъеги.wav",
+    "letter": "Хъ"
+  },
+  {
+    "word": "хьаг",
+    "translation": "кастрюля, котёл",
+    "source": "audio/хьаг.wav",
+    "letter": "Хь"
+  },
+  {
+    "word": "хӏан",
+    "translation": "сыр",
+    "source": "audio/хӏан.wav",
+    "letter": "ХӀ"
+  },
+  {
+    "word": "цӏер",
+    "translation": "лёд, стекло",
+    "source": "audio/цӏер.wav",
+    "letter": "ЦӀ"
+  },
+  {
+    "word": "чӏар",
+    "translation": "сорняк",
+    "source": "audio/чӏар.wav",
+    "letter": "ЧӀ"
+  }
+]

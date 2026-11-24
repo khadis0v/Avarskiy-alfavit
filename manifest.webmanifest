@@ -1,0 +1,17 @@
+{
+  "name": "Аварский алфавит",
+  "short_name": "Аварский алфавит",
+  "lang": "ru",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#17252d",
+  "theme_color": "#17252d",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

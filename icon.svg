@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#17252d"/>
+  <rect x="52" y="52" width="408" height="408" rx="76" fill="#243842"/>
+  <text x="256" y="315" fill="#edf4f6" font-family="Arial, sans-serif" font-size="176" font-weight="700" text-anchor="middle">Гъ</text>
+</svg>

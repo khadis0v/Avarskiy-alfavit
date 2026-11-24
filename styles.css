@@ -1,0 +1,23 @@
+/* База без слопа: умолчания, которые нужны любому сайту. Палитра и шрифты — из DESIGN.md (шаг 5 скилла). */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #141414;
+  --color-muted: #5c5c5c;
+  --color-line: #e6e6e6;
+  --color-accent: #1446f5;
+  --font-display: system-ui, sans-serif;
+  --font-body: system-ui, sans-serif;
+  --space-section: clamp(64px, 10vw, 140px);
+  --content: 1200px;
+  --radius: 10px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--color-bg); color: var(--color-text); font: 400 17px/1.6 var(--font-body); }
+img, video { max-width: 100%; height: auto; display: block; }
+h1, h2, h3 { font-family: var(--font-display); line-height: .92; letter-spacing: -.02em; text-wrap: balance; margin: 0; }
+p { text-wrap: pretty; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+main > section { padding: var(--space-section) max(16px, calc((100vw - var(--content)) / 2)); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }

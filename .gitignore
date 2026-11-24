@@ -1,0 +1,4 @@
+assets/normalized/
+assets/pairs/
+__pycache__/
+.DS_Store
