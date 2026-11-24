@@ -46,7 +46,7 @@ for i,item in enumerate(items,1):
 font=base64.b64encode((root/'assets/golos-text.ttf').read_bytes()).decode()
 buttons=''.join(f'<button class="letter" type="button" data-index="{i}" aria-pressed="false" aria-label="Прослушать три слова для буквы {x["letter"]}"><span lang="av">{x["letter"]}</span></button>' for i,x in enumerate(items))
 html='''<!doctype html>
-<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Нажмите на одну из 13 особых букв аварского алфавита: прозвучат три простых слова с переводом. Работает без интернета."><meta name="color-scheme" content="dark"><meta name="theme-color" content="#17252d"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg" type="image/svg+xml"><title>Аварский алфавит | Слушайте и повторяйте</title>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name="description" content="Нажмите на одну из 13 особых букв аварского алфавита: прозвучат три простых слова с переводом. Работает без интернета."><meta name="color-scheme" content="dark"><meta name="theme-color" content="#17252d"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg" type="image/svg+xml"><title>Аварский алфавит | Слушайте и повторяйте</title>
 <style>
 @font-face{font-family:'Golos Text';src:url(data:font/ttf;base64,FONT);font-weight:500;font-display:swap}
 :root{--bg:#17252d;--surface:#243842;--ink:#edf4f6;--muted:#b2c6d0;--accent:#c3dce8;--font-main:'Golos Text';--radius:14px}
@@ -84,6 +84,11 @@ buttons.forEach((button,index)=>button.addEventListener('click',()=>{
 player.addEventListener('timeupdate',()=>{if(active<0||player.paused)return;const item=items[active],time=player.currentTime,current=time>=item.wordStarts[2]?2:time>=item.wordStarts[1]?1:0;phase.textContent='Слово '+(current+1)+' из 3';words.querySelectorAll('[data-word]').forEach(node=>node.dataset.current=String(Number(node.dataset.word)===current));});
 document.addEventListener('keydown',event=>{if(event.key==='Escape'){resetPlayback();phase.textContent='Остановлено';}});
 document.addEventListener('visibilitychange',()=>{if(document.hidden&&!player.paused){resetPlayback();phase.textContent='Остановлено';}});
+// На учебной сетке жест двумя пальцами не должен менять масштаб страницы.
+document.addEventListener('gesturestart',event=>event.preventDefault(),{passive:false});
+document.addEventListener('gesturechange',event=>event.preventDefault(),{passive:false});
+document.addEventListener('gestureend',event=>event.preventDefault(),{passive:false});
+document.addEventListener('touchmove',event=>{if(event.touches.length>1)event.preventDefault();},{passive:false});
 if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
 </script></body></html>'''
 html=html.replace('FONT',font).replace('BUTTONS',buttons).replace('ITEMS',json.dumps(items,ensure_ascii=False))
